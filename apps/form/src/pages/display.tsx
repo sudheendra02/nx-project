@@ -6,7 +6,8 @@ export default () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="border-solid border-2 border-black p-32 grid">
-        {displayValue.value}
+        <div className='mb-4'>---The Data you entered---</div>
+        <div className='text-center'>{displayValue.value}</div>
       </div>
     </div>
   );

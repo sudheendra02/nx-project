@@ -14,14 +14,16 @@ export default () => {
     <div className="flex items-center justify-center h-screen">
       <div className="border-solid border-2 border-black p-32 grid">
         <input
-          className="border-solid border border-black mb-8"
+          className="border-solid border border-black mb-8 p-2"
           value={displayValue.value}
+          autoFocus
+          placeholder='Enter your input to display'
           onChange={(e) => {
             dispatch(setDisplayValue(e.target.value));
           }}
         ></input>
         <button
-          className="border-solid border border-black"
+          className="border-solid rounded-2xl bg-gray-100 border border-black"
           onClick={() => navigate('./display-form')}
         >
           Submit
