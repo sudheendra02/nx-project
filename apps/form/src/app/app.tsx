@@ -1,13 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import InputForm from '../pages/input-form';
+import DisplayForm from '../pages/display';
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="form" />
-      <div />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<InputForm />} />
+        <Route path="/display-form" element={<DisplayForm />} />
+      </Routes>
+    </Router>
   );
 }
 
